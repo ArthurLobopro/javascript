@@ -8,4 +8,7 @@ const myMath = {
     floor: function(num){
         return parseInt(num)
     },
+    ceil: function(num){
+        return parseInt(num)+1
+    },
 }
