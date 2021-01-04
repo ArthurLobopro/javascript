@@ -12,7 +12,10 @@ const myMath = {
         return parseInt(num)+1
     },
     hip: function(c1,c2){
-        return this.sqrt(c1**2+c2**2)
+        return this.root(c1**2+c2**2)
+    },
+    cat: function(c,h){
+        return this.root(h**2-c**2)
     }
 }
 export default myMath 
