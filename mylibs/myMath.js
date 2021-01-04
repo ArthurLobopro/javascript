@@ -16,6 +16,13 @@ const myMath = {
     },
     cat: function(c,h){
         return this.root(h**2-c**2)
+    },
+    fatorial: function(num){
+        let fat= 1
+        for(i = num;i>0;i--){
+            fat*=i
+        }
+        return fat
     }
 }
 export default myMath 
