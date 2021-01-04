@@ -18,11 +18,14 @@ const myMath = {
         return this.root(h**2-c**2)
     },
     fatorial: function(num){
-        let fat= 1
-        for(i = num;i>0;i--){
+        return (num<0)? console.error(`O número informado: ${num} não é um número natural!`) : fact(num)
+        function fact(){
+            let fat= 1
+            for(i = num;i>0;i--){
             fat*=i
-        }
-        return fat
+            }
+            return fat
+        }   
     }
 }
 export default myMath 
