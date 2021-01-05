@@ -7,6 +7,7 @@ const myMath = {
     hip: function(c1,c2){
         return this.root(c1**2+c2**2)
     },
+    sign: num => (num>0)? 1 : (num<0)?-1 : 0,
     cat: function(c,h){
         return this.root(h**2-c**2)
     },
