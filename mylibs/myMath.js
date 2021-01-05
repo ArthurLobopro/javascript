@@ -1,16 +1,9 @@
 const myMath = {
-    pow: function(num,expo=2){
-        return num**expo
-    },
-    root: function(num,expo=2){
-        return num**(1/expo)
-    },
-    floor: function(num){
-        return parseInt(num)
-    },
-    ceil: function(num){
-        return parseInt(num)+1
-    },
+    pow: (num, expo = 2) => num ** expo,
+    root: (num, expo = 2) => num ** (1 / expo),
+    floor: num => parseInt(num),
+    trunc: num => parseInt(num),
+    ceil: num => parseInt(num) + 1,
     hip: function(c1,c2){
         return this.root(c1**2+c2**2)
     },
