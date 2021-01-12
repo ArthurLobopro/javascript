@@ -15,7 +15,11 @@ const myMath = {
         const date = new Date()
         let mil = date.getMilliseconds()
         let min = date.getMinutes()
-        return mil**3
+        let seg = date.getSeconds()
+        return Number(`0.${mil**3*min*seg}`)
+    },
+    randint: function(min,max){
+
     },
     fatorial: function(num){
         return (num<0)? console.error(`O número informado: ${num} não é um número natural!`) : fact(num)
