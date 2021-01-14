@@ -1,3 +1,4 @@
+// Este módulo só funciona no Node.js
 const color = {
     colors: {
         'black':         30,
