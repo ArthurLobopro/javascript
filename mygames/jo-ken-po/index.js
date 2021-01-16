@@ -10,7 +10,6 @@ function jogada(valor){
     const jogadas = ['pedra','papel','tesoura']
     const jogador = valor
     const computador = jogadas[randint(0,2)]
-    //alert(`${jogador},${computador}`)
     jokenpo()
     resultado(jogador,computador)
 }
@@ -77,6 +76,3 @@ function resultado(jogador,computador){
         
     </div>`
 }
-//
-//const txt = document.querySelectorAll('.txt')
-//txt[i].innerHTML=`<span class='show'>${opcoes.texto[i]}</span>`
