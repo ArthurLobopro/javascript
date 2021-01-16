@@ -6,6 +6,12 @@
     border-radius: 5px;
     padding: 20px 0;
 }
+#placar{
+    width: max-content;
+    margin: auto;
+    font-family: 'Nunito';
+    font-size: 40px;
+}
 body,#content,.img,.txt,.vs,.player,.pc{
     display: flex;
     justify-content: center;
@@ -47,15 +53,11 @@ body{
     width: 70px;
     transform: rotate(90deg);
 }
-.vs{
-    grid-area: vs;
-}
-.player{
-    grid-area: player;
-}
-.pc{
-    grid-area: pc;
-}
+
+.vs{ grid-area: vs; }
+.player{ grid-area: player; }
+.pc{ grid-area: pc; }
+
 .result{
     grid-area: result;
     margin: auto;
