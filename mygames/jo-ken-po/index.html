@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="index.css">
     <title>Jo-ken-po game</title>
 </head>
-<body onload='lercookie()'>
+<body>
     <section>
         <div id="placar">
             Você <span id="player"></span> x <span id="bot"></span> Bot
@@ -34,6 +34,7 @@
             const altura = window.innerHeight
             body.style.height=`${altura}px`
             body.style.width=`${largura}px`
+            lercookie()
         }
         body.onresize = () =>{
             const largura = window.innerWidth
