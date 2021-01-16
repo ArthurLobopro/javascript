@@ -11,7 +11,9 @@ function jogada(valor){
     const jogador = valor
     const computador = jogadas[randint(0,2)]
     jokenpo()
-    resultado(jogador,computador)
+    setTimeout(() => {
+        resultado(jogador,computador)
+    }, 7000);
 }
 function jokenpo(){
     content.innerHTML=`
