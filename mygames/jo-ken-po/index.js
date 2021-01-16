@@ -13,7 +13,7 @@ function jogada(valor){
     jokenpo()
     setTimeout(() => {
         resultado(jogador,computador)
-    }, 7000);
+    }, 4000);
 }
 function jokenpo(){
     content.innerHTML=`
@@ -25,12 +25,12 @@ function jokenpo(){
         <div class='txt'></div>
         <div class='txt'></div>
     </div>`
-    img(0,1000)
-    txt(0,2000)
-    img(1,3000)
-    txt(1,4000)
-    img(2,5000)
-    txt(2,6000)
+    img(0,500)
+    txt(0,1000)
+    img(1,1500)
+    txt(1,2000)
+    img(2,2500)
+    txt(2,3000)
     function img(value,time) {
         setTimeout(() => {
             document.querySelectorAll('div.img')[value].innerHTML=`<img src="${opcoes.caminho[value]}" class='up'>`
