@@ -47,7 +47,8 @@ body{
     grid-template-rows: auto auto; */
     grid-template:
     'player player vs pc pc'
-    'result result result result result';
+    'result result result result result'
+    'button button button button button';
 }
 .player img{
     width: 70px;
@@ -81,6 +82,12 @@ body{
 }
 .circle:hover{
     background-color: #ccc;
+}
+button{
+    background-color: green;
+    font-family: 'Nunito';
+    font-size: 20px;
+    grid-area: button;
 }
 #escolha{
     width: max-content;

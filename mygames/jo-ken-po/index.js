@@ -6,11 +6,11 @@ const opcoes = {
 }
 const content = document.getElementById('content')
 function lercookie(){
-    let date = document.cookie.indexOf('placar')
-    if(date==-1){
+    const cook = document.cookie
+    if(cook==''){
         criaCookie()
     }else{
-        const cook = document.cookie
+        let date = document.cookie.indexOf('placar')
         let x = cook.indexOf('x',date)
         player=Number(cook.substring(7,x))
         bot = Number(cook.substring(x+1,cook.length))
@@ -104,6 +104,7 @@ function resultado(jogador,computador){
             <div class='vs'>X</div>
             <div class='pc'><img src="midia/${computador}.svg"> Bot</div>
             <div class='result'><span class="msg">${msg}</span></div>
+            <button onclick='restart()'>Jogar outra vez</button>
         </div>
     </div>`
     placar()
