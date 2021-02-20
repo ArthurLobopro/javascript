@@ -23,9 +23,7 @@ const myMath = {
         return (num<0)? console.error(`O número informado: ${num} não é um número natural!`) : fact(num)
         function fact(){
             let fat= 1
-            for(i = num;i>0;i--){
-            fat*=i
-            }
+            for(i = num;i>0;i--){ fat*=i }
             return fat
         }   
     }
