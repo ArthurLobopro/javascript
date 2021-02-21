@@ -1,3 +1,4 @@
+// Autor: Arthur Lobo, Nota: As funções que não convertam decimal => base esperam uma string sem o indicador da base.
 const dec_to =  (dec,base) => {
     let found = false
     let num = []
