@@ -17,12 +17,6 @@ const to_dec = (num,base) => {
     }
     return dec
 }
-
-const dec_to_bin = dec => dec_to(dec,2)
-const dec_to_oct = dec => dec_to(dec,8)
-const bin_to_dec = bin => to_dec(bin,2)
-const oct_to_dec = oct => to_dec(oct,8)
-
 const dec_to_hex = dec => {
     const hexn = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
     let hex = dec_to(dec,16)
@@ -43,5 +37,11 @@ const hex_to_dec = hex => {
     }
     return dec
 }
+
+const dec_to_bin = dec => dec_to(dec,2)
+const dec_to_oct = dec => dec_to(dec,8)
+const bin_to_dec = bin => to_dec(bin,2)
+const oct_to_dec = oct => to_dec(oct,8)
 const bin_to_hex = bin => dec_to_hex(bin_to_dec(bin))
+
 export {dec_to, dec_to_bin, dec_to_oct, dec_to_hex, to_dec, bin_to_dec, oct_to_dec, hex_to_dec,bin_to_hex}
