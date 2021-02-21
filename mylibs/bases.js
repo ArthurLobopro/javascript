@@ -1,13 +1,17 @@
-const dec_to_bin = dec => {
+const dec_to =  (dec,base) => {
     let found = false
-    let bin = []
+    let num = []
     do{
-        bin.push(dec%2)
-        dec = Math.floor(dec/2)
+        num.push(dec%base)
+        dec = Math.floor(dec/base)
         found = dec==0 ? true : false
     }while (!found)
-    return String(bin.reverse().join(''))
+    return String(num.reverse().join(''))
 }
+
+const dec_to_bin = dec => dec_to(dec,2)
+const dec_to_oct = dec => dec_to(dec,8)
+
 const bin_to_dec = bin => {
     bin = String(bin).split('').reverse()
     let mult = 1, dec = 0
@@ -17,14 +21,4 @@ const bin_to_dec = bin => {
     }
     return dec
 }
-let dec_to_oct = dec => {
-    let found = false
-    let oct = []
-    do{
-        oct.push(dec%8)
-        dec = Math.floor(dec/8)
-        found = dec==0 ? true : false
-    }while (!found)
-    return String(oct.reverse().join(''))
-}
-export {dec_to_bin, bin_to_dec}
+export {dec_to_bin, dec_to_oct, bin_to_dec}
