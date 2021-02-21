@@ -8,7 +8,7 @@ const dec_to_bin = dec => {
     }while (!found)
     return String(bin.reverse().join(''))
 }
-let bin_to_dec = bin => {
+const bin_to_dec = bin => {
     bin = String(bin).split('').reverse()
     let mult = 1, dec = 0
     for(let i of bin){
@@ -16,5 +16,15 @@ let bin_to_dec = bin => {
         mult*=2
     }
     return dec
+}
+let dec_to_oct = dec => {
+    let found = false
+    let oct = []
+    do{
+        oct.push(dec%8)
+        dec = Math.floor(dec/8)
+        found = dec==0 ? true : false
+    }while (!found)
+    return String(oct.reverse().join(''))
 }
 export {dec_to_bin, bin_to_dec}
