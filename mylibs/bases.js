@@ -41,13 +41,16 @@ const hex_to_dec = hex => {
 const dec_to_bin = dec => dec_to(dec,2)
 const dec_to_oct = dec => dec_to(dec,8)
 const bin_to_dec = bin => to_dec(bin,2)
+const bin_to_oct = bin => dec_to_oct(bin_to_dec(bin))
 const bin_to_hex = bin => dec_to_hex(bin_to_dec(bin))
 const oct_to_dec = oct => to_dec(oct,8)
+const oct_to_bin = oct => dec_to_bin(oct_to_dec(oct))
 const oct_to_hex = oct => dec_to_hex(oct_to_dec(oct))
 
 export {
-    dec_to, dec_to_bin, dec_to_oct, dec_to_hex, //Conversões decimal => base
-    to_dec, bin_to_dec, oct_to_dec, hex_to_dec, // Conversões base => decimal
-    bin_to_hex, //Conversões binário => base
-    oct_to_hex, //Conversões octal => base
+    dec_to, to_dec, // *Pode ser usada em qualquer base que use apenas números (minimo binário, max decimal)
+    dec_to_bin, dec_to_oct, dec_to_hex, //Conversões decimal => base
+    bin_to_dec, oct_to_dec, hex_to_dec, // Conversões base => decimal
+    bin_to_oct,bin_to_hex, //Conversões binário => base
+    oct_to_bin,oct_to_hex  //Conversões octal => base
 }
