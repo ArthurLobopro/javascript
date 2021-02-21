@@ -30,7 +30,7 @@ const dec_to_hex = dec => {
     return String(hex.reverse().join(''))
 }
 
-export {dec_to, dec_to_bin, dec_to_oct, dec_to_hex, to_dec, bin_to_dec, oct_to_dec}const hex_to_dec = hex => {
+const hex_to_dec = hex => {
     const numbers = { A: 10, B: 11, C: 12, D:13, E: 14, F: 15 }
     hex = String(hex).toUpperCase().split('').reverse()
     for(let i in hex){ 
@@ -43,3 +43,5 @@ export {dec_to, dec_to_bin, dec_to_oct, dec_to_hex, to_dec, bin_to_dec, oct_to_d
     }
     return dec
 }
+const bin_to_hex = bin => dec_to_hex(bin_to_dec(bin))
+export {dec_to, dec_to_bin, dec_to_oct, dec_to_hex, to_dec, bin_to_dec, oct_to_dec, hex_to_dec,bin_to_hex}
