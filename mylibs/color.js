@@ -1,6 +1,5 @@
 // Este módulo só funciona no Node.js
-const color = {
-    colors: {
+const colors = {
         'black':         30,
         'red':           31,
         'green':         32,
@@ -17,23 +16,22 @@ const color = {
         'ligth magenta': 95,
         'ligth cyan':    96,
         'white':         97
-    },
-    styles: {
-        'bold':      1,
-        'underline': 4,
-        'negative':  7
-    },
-    cret: function(string, c='', bgc='', style=0){
-        const init = '\033['
-        let end = init+'m'
-        if (c !== ''){c= this.colors[c]}
-        if (bgc!== ''){bgc= this.colors[bgc]+10}
-        if (style !== 0){style = this.styles[style]}
-        let str =(bgc=='') ? `${init+style};${c}m${string+end}` : `${init+style};${c};${bgc}m${string+end}`
-        return str
-    },
-    clog: function(string,c='',bgc='',style=0){
-        console.log(this.cret(string,c,bgc,style))
-    }
 }
-export default color
+const styles = {
+    'bold':      1,
+    'underline': 4,
+    'negative':  7
+}
+const cret = (str, c='', bgc='', sty=0) =>{
+    const init = '\033['
+    let end = init+'m'
+    if (c !== ''){c= colors[c]}
+    if (bgc!== ''){bgc= colors[bgc]+10}
+    if (sty !== 0){sty = styles[sty]}
+    str = (bgc=='') ? `${init+sty};${c}m${str+end}` : `${init+sty};${c};${bgc}m${str+end}`
+    return str
+}
+const clog = (str,c='',bgc='',sty=0) => {
+    console.log(cret(str,c,bgc,sty))
+}
+export {cret,clog}
