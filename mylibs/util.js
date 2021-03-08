@@ -9,4 +9,5 @@ const reverse = str =>{
     array = String(array).replaceAll(',','')
     return array
 }
-export { range, reverse}
+const randint = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+export { range, reverse, randint}
