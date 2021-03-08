@@ -40,3 +40,4 @@ const hex_to_rgb = hex => {
     let b = hex_to_dec( String(hex).substring(4,6) )
     return `(${r}, ${g}, ${b})`
 }
+export {rgb_to_hex, hex_to_rgb}

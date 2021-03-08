@@ -26,3 +26,4 @@ function div_dec(n1,n2){
     multi*= (n1_l>n2_l)? 10**n1_l : 10**n2_l
     return (n1*multi) / (n2*multi)
 }
+export {soma_dec, sub_dec, mult_dec, div_dec}
