@@ -1,0 +1,43 @@
+.full{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.200);
+    display: flex;
+    justify-content: center;
+}
+#alert-interior{
+    display: grid;
+    grid-template-rows: 35px auto 35px;
+    grid-row-gap: 5px;
+    border-radius: 15px;
+    background-color: #303030;
+    min-width: 320px;
+    padding: 15px;
+    & .title{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ccc;
+    }
+    & .text{
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ccc;
+    }
+    & button{
+        background: #0D6EFD;
+        padding: 2px 5px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #eee;
+        border: none;
+        border-radius: 3px;
+        justify-self: right;
+        align-self: center;
+        width: 50px;
+        height: 30px;
+    }
+}
