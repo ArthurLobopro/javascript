@@ -14,7 +14,7 @@ const random = () =>{
     let seg = date.getSeconds()
     return Number(`0.${mil**3*min*seg}`)
 }
-const isInt = num => (String(num).indexOf('.')==-1)? true : false
+const isInt = num => String(num).indexOf('.') === -1
 const fatorial = num =>{
     const fact = () => {
         let fat= 1
